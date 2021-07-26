@@ -138,6 +138,18 @@
 
 # 5. **被写界深度**
 
+![DepthInView ](https://user-images.githubusercontent.com/54493763/126992452-1b251d8b-b5f0-490b-9a4c-20c330351787.png)
+![NonDepthInView ](https://user-images.githubusercontent.com/54493763/126992454-5208edbc-6062-455d-bdd6-cda18cc4f12d.png)  
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+通常描画
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+被写界深度適用
+<br></br>
+左の画像が通常のゲーム画面です。右の画像が被写界深度を取り入れたゲーム画面です。  
+
+
+
 <a id = 'PBR'></a>
 
 # 6. **PBR**
