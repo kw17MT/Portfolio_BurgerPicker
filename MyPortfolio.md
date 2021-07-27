@@ -56,7 +56,7 @@
 3. ### [**AOマップ**](#AOMap)
 4. ### [**デプスシャドウ**](#DepthShadow)
 5. ### [**被写界深度**](#DepthInView)  
-6. ### [**PBR**](#PBR)  
+6. ### [**PBR (Physically based rendering)**](#PBR)  
 7. ### [**ディファードレンダリング**](#Deffered)
 
 <br></br> 
@@ -112,7 +112,7 @@
 
 <a id = 'AOMap'></a>
 
-# 3. **AOマップ**
+# 3. **AOマップ(実装方法違う可能性あり）**
 
 <a id = 'DepthShadow'></a>
 
@@ -131,7 +131,7 @@
 ![UsingDepthShadow](https://user-images.githubusercontent.com/54493763/126989459-a776aab6-097b-45f3-8ef4-b622e16d403a.png)  
 このゲームでは、具材の位置が上下になる箇所があります。  
 上の具材に不自然な影が映ってしまわないようにするために役立っています。
-<br>
+<br></br>
 
 
 <a id = 'DepthinView'></a>
@@ -147,23 +147,31 @@
 被写界深度適用
 <br></br>
 左の画像が通常のゲーム画面です。右の画像が被写界深度を取り入れたゲーム画面です。  
-
+<br></br>
 
 
 <a id = 'PBR'></a>
 
-# 6. **PBR**
-
+# 6. **PBR (Physically based rendering)**
+![nonPBR](https://user-images.githubusercontent.com/54493763/127108852-03125eda-be3e-4188-9573-6e199fa3729a.png)
+![PBR](https://user-images.githubusercontent.com/54493763/127108847-204b00cb-e6b7-4284-8151-9e253cc681a6.png)
+  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+PBR非適用
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+PBR適用
+<br></br>
+光を受ける物体の法線やライトから物体へのベクトル、カメラから物体へのベクトルを用いて光の影響度、鏡面反射率を計算しました。  
+物体の窪んでいる部分など、何も工夫せずに描画したものと、PBRを用いて描画したものを比較するとかなりのビジュアルの向上が確認できました。
+<br></br>
 <a id = 'Deffered'></a>
 
-# 7. **ディファードレンダリング**
+# 7. **ディファードレンダリング（未完成）**
 
 
-
-<details><summary>aaaa</summary>
-aaaaaa
-</details>
-
-これは<span style="color: #ff0000; ">赤文字</span>です
-
-
+<!-- 
+<details><summary>aaaa</summary>\
+aaaaaa\
+</details>\
+これは<span style="color: #ff0000; ">赤文字</span>です\
+-->
