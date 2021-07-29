@@ -53,7 +53,7 @@
 # 目次
 1. ### [**操作説明**](#Operation)
 2. ### [**川瀬式ガウシアンブラー**](#GaussianBlur)
-3. ### [**AOマップ**](#AOMap)
+3. ### [**疑似AOマップ**](#AOMap)
 4. ### [**デプスシャドウ**](#DepthShadow)
 5. ### [**被写界深度**](#DepthInView)  
 6. ### [**PBR (Physically based rendering)**](#PBR)  
@@ -68,7 +68,7 @@
 # 1. 操作説明
 
 ![Operation](https://user-images.githubusercontent.com/54493763/126964230-02dca9ea-6da9-42c4-af7f-9b0ed3c606f1.png)
-
+<br></br>
 
 <a id = 'GaussianBlur'></a>
 
@@ -104,19 +104,13 @@
 ![Burger_Blur](https://user-images.githubusercontent.com/54493763/126969979-01bc583f-77fd-4dee-a638-e8251fa6345b.png)  
 &emsp;&emsp;&emsp;&emsp;&emsp;
 通常描画
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-ブラー適用
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+ブルームとして適用
 <br></br>
-
-
-
-<a id = 'AOMap'></a>
-
-# 3. **AOマップ(実装方法違う可能性あり）**
 
 <a id = 'DepthShadow'></a>
 
-# 4. **デプスシャドウ**
+# 3. **デプスシャドウ**
 ![ProjectionShadow](https://user-images.githubusercontent.com/54493763/126988196-c52b6880-4acc-4776-8456-cef47c37b7e2.png)  
 上の画像は投影シャドウマップを利用した影生成です。
 分かりやすいように、特別にシャドウキャスターの上に板を設けて、影が映ってしまっている状況を確認しました。
@@ -136,7 +130,7 @@
 
 <a id = 'DepthinView'></a>
 
-# 5. **被写界深度**
+# 4. **被写界深度**
 
 ![DepthInView ](https://user-images.githubusercontent.com/54493763/126992452-1b251d8b-b5f0-490b-9a4c-20c330351787.png)
 ![NonDepthInView ](https://user-images.githubusercontent.com/54493763/126992454-5208edbc-6062-455d-bdd6-cda18cc4f12d.png)  
@@ -152,7 +146,7 @@
 
 <a id = 'PBR'></a>
 
-# 6. **PBR (Physically based rendering)**
+# 5. **PBR (Physically based rendering)**
 ![nonPBR](https://user-images.githubusercontent.com/54493763/127108852-03125eda-be3e-4188-9573-6e199fa3729a.png)
 ![PBR](https://user-images.githubusercontent.com/54493763/127108847-204b00cb-e6b7-4284-8151-9e253cc681a6.png)
   
@@ -164,6 +158,23 @@ PBR適用
 光を受ける物体の法線やライトから物体へのベクトル、カメラから物体へのベクトルを用いて光の影響度、鏡面反射率を計算しました。  
 物体の窪んでいる部分など、何も工夫せずに描画したものと、PBRを用いて描画したものを比較するとかなりのビジュアルの向上が確認できました。
 <br></br>
+
+
+<a id = 'AOMap'></a>
+
+# 6. **疑似AOマップ**
+
+![NonAO](https://user-images.githubusercontent.com/54493763/127458534-9077d2e9-575c-4f77-b5b3-09c3b77e1542.png)
+![AO](https://user-images.githubusercontent.com/54493763/127458529-04fc322c-efa6-452a-86ec-dfef7c3258d5.png)  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+PBRのみ
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+疑似AOマップ適用
+<br></br>
+テクスチャの1つとしてAOマップ専用の画像を用意しているわけではなく、法線情報を利用して環境光の適用具合をコントロールしています。  
+オブジェクトの上面にはあまり影響がでませんが、側面には影響がでています。
+特にプレイヤーの帽子上部のしわがしっかりと出てくれています。
+
 <a id = 'Deffered'></a>
 
 # 7. **ディファードレンダリング（未完成）**
